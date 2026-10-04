@@ -1,0 +1,1418 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="بازارچه افغانستان؛ خرید و فروش آسان در سراسر افغانستان">
+
+  <title>بازارچه افغانستان | خرید و فروش</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="topbar">
+
+  <div class="topbar-inner">
+
+    <button
+      id="menuBtn"
+      class="icon-btn"
+      type="button"
+      aria-label="منو">
+      ☰
+    </button>
+
+    <a href="#" class="brand" data-page="home">
+      <span class="brand-icon">🛍️</span>
+      <span>بازارچه</span>
+    </a>
+
+    <button
+      id="locationBtn"
+      class="location-btn"
+      type="button">
+      📍 <span id="selectedLocation">همه افغانستان</span>
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- ================= SIDE MENU ================= -->
+
+<aside id="sideMenu" class="side-menu">
+
+  <div class="side-menu-header">
+    <strong>بازارچه</strong>
+
+    <button id="closeMenuBtn" class="icon-btn" type="button">
+      ✕
+    </button>
+  </div>
+
+  <button data-page="home" class="side-link">
+    🏠 خانه
+  </button>
+
+  <button data-page="search" class="side-link">
+    🔎 جستجوی آگهی
+  </button>
+
+  <button data-page="favorites" class="side-link">
+    ⭐ علاقه‌مندی‌ها
+  </button>
+
+  <button data-page="add" class="side-link">
+    ➕ ثبت آگهی
+  </button>
+
+  <button data-page="chat" class="side-link">
+    💬 پیام‌ها
+  </button>
+
+  <button data-page="account" class="side-link">
+    👤 حساب من
+  </button>
+
+  <button data-page="settings" class="side-link">
+    ⚙️ تنظیمات
+  </button>
+
+</aside>
+
+<div id="menuOverlay" class="menu-overlay"></div>
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="homePage" class="page active-page">
+
+  <!-- HERO -->
+
+  <section class="hero-modern">
+
+    <div class="hero-content">
+
+      <span class="hero-badge">
+        🇦🇫 بازار خرید و فروش افغانستان
+      </span>
+
+      <h1>
+        هر چیزی را که می‌خواهی،
+        <span>پیدا کن</span>
+      </h1>
+
+      <p>
+        آگهی‌های خرید و فروش از سراسر افغانستان را جستجو کن.
+      </p>
+
+      <!-- SEARCH -->
+
+      <div class="hero-search">
+
+        <span>🔎</span>
+
+        <input
+          id="homeSearchInput"
+          type="search"
+          placeholder="چه چیزی می‌خواهی پیدا کنی؟"
+          autocomplete="off">
+
+        <button
+          id="homeSearchBtn"
+          class="primary"
+          type="button">
+          جستجو
+        </button>
+
+      </div>
+
+      <!-- LOCATION -->
+
+      <button
+        id="heroLocationBtn"
+        class="hero-location"
+        type="button">
+
+        📍
+        <span>
+          موقعیت:
+          <b id="heroLocation">
+            همه افغانستان
+          </b>
+        </span>
+
+        ▾
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+
+  <section class="content-section">
+
+    <div class="section-head">
+
+      <div>
+        <span class="section-label">
+          دسته‌بندی
+        </span>
+
+        <h2>
+          چه چیزی می‌خواهی؟
+        </h2>
+      </div>
+
+      <button
+        class="text-btn"
+        data-page="search"
+        type="button">
+        همه
+      </button>
+
+    </div>
+
+
+    <div class="category-grid">
+
+      <button class="category-card" data-category="موبایل">
+        <span>📱</span>
+        <strong>موبایل</strong>
+        <small>موبایل و تبلت</small>
+      </button>
+
+      <button class="category-card" data-category="لپ‌تاپ">
+        <span>💻</span>
+        <strong>لپ‌تاپ</strong>
+        <small>کامپیوتر</small>
+      </button>
+
+      <button class="category-card" data-category="وسایل نقلیه">
+        <span>🚗</span>
+        <strong>وسایل نقلیه</strong>
+        <small>موتر و موترسایکل</small>
+      </button>
+
+      <button class="category-card" data-category="املاک">
+        <span>🏠</span>
+        <strong>املاک</strong>
+        <small>خانه و زمین</small>
+      </button>
+
+      <button class="category-card" data-category="لوازم خانه">
+        <span>🛋️</span>
+        <strong>لوازم خانه</strong>
+        <small>مبلمان و وسایل</small>
+      </button>
+
+      <button class="category-card" data-category="پوشاک">
+        <span>👕</span>
+        <strong>پوشاک</strong>
+        <small>لباس و کفش</small>
+      </button>
+
+      <button class="category-card" data-category="الکترونیکی">
+        <span>🔌</span>
+        <strong>الکترونیکی</strong>
+        <small>لوازم برقی</small>
+      </button>
+
+      <button class="category-card" data-category="کتاب">
+        <span>📚</span>
+        <strong>کتاب</strong>
+        <small>کتاب و آموزش</small>
+      </button>
+
+      <button class="category-card" data-category="خدمات">
+        <span>🛠️</span>
+        <strong>خدمات</strong>
+        <small>خدمات مختلف</small>
+      </button>
+
+      <button class="category-card" data-category="کاریابی">
+        <span>💼</span>
+        <strong>کاریابی</strong>
+        <small>فرصت‌های کاری</small>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURED -->
+
+  <section class="content-section">
+
+    <div class="section-head">
+
+      <div>
+        <span class="section-label">
+          🔥 پیشنهادها
+        </span>
+
+        <h2>
+          آگهی‌های منتخب
+        </h2>
+      </div>
+
+      <button
+        class="text-btn"
+        data-page="search"
+        type="button">
+        مشاهده همه
+      </button>
+
+    </div>
+
+    <div
+      id="featuredProducts"
+      class="product-grid">
+    </div>
+
+  </section>
+
+
+  <!-- LATEST -->
+
+  <section class="content-section">
+
+    <div class="section-head">
+
+      <div>
+        <span class="section-label">
+          🆕 جدیدترین
+        </span>
+
+        <h2>
+          تازه‌ترین آگهی‌ها
+        </h2>
+      </div>
+
+      <button
+        class="text-btn"
+        data-page="search"
+        type="button">
+        همه آگهی‌ها
+      </button>
+
+    </div>
+
+    <div
+      id="homeProducts"
+      class="product-grid">
+    </div>
+
+  </section>
+
+</section>
+
+
+<!-- ================= SEARCH ================= -->
+
+<section id="searchPage" class="page">
+
+  <div class="page-container">
+
+    <div class="page-title">
+
+      <span class="section-label">
+        🔎 جستجو
+      </span>
+
+      <h1>
+        پیدا کردن آگهی
+      </h1>
+
+      <p>
+        کالا یا خدمات موردنظرت را جستجو کن.
+      </p>
+
+    </div>
+
+
+    <!-- SEARCH BOX -->
+
+    <div class="search-main-box">
+
+      <span>🔎</span>
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="مثلاً آیفون، لپ‌تاپ، موتر..."
+        autocomplete="off">
+
+      <button
+        id="clearSearchBtn"
+        type="button">
+        ✕
+      </button>
+
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="filter-card">
+
+      <div class="filter-title">
+
+        <strong>
+          🎛️ فیلترها
+        </strong>
+
+        <button
+          id="resetFiltersBtn"
+          class="text-btn"
+          type="button">
+          پاک کردن
+        </button>
+
+      </div>
+
+
+      <div class="filters-grid">
+
+        <!-- CATEGORY -->
+
+        <label>
+
+          <span>
+            دسته‌بندی
+          </span>
+
+          <select id="categoryFilter">
+
+            <option value="">
+              همه دسته‌ها
+            </option>
+
+            <option value="موبایل">
+              📱 موبایل
+            </option>
+
+            <option value="لپ‌تاپ">
+              💻 لپ‌تاپ
+            </option>
+
+            <option value="وسایل نقلیه">
+              🚗 وسایل نقلیه
+            </option>
+
+            <option value="املاک">
+              🏠 املاک
+            </option>
+
+            <option value="لوازم خانه">
+              🛋️ لوازم خانه
+            </option>
+
+            <option value="پوشاک">
+              👕 پوشاک
+            </option>
+
+            <option value="الکترونیکی">
+              🔌 الکترونیکی
+            </option>
+
+            <option value="کتاب">
+              📚 کتاب
+            </option>
+
+            <option value="خدمات">
+              🛠️ خدمات
+            </option>
+
+            <option value="کاریابی">
+              💼 کاریابی
+            </option>
+
+          </select>
+
+        </label>
+
+
+        <!-- CITY -->
+
+        <label>
+
+          <span>
+            📍 ولایت
+          </span>
+
+          <select id="cityFilter">
+
+            <option value="">
+              همه افغانستان
+            </option>
+
+            <option>کابل</option>
+            <option>هرات</option>
+            <option>قندهار</option>
+            <option>بلخ</option>
+            <option>مزار شریف</option>
+            <option>ننگرهار</option>
+            <option>جلال‌آباد</option>
+            <option>کندز</option>
+            <option>تخار</option>
+            <option>بدخشان</option>
+            <option>بغلان</option>
+            <option>سمنگان</option>
+            <option>سرپل</option>
+            <option>فاریاب</option>
+            <option>جوزجان</option>
+            <option>بادغیس</option>
+            <option>فراه</option>
+            <option>نیمروز</option>
+            <option>هلمند</option>
+            <option>زابل</option>
+            <option>ارزگان</option>
+            <option>غزنی</option>
+            <option>پکتیا</option>
+            <option>پکتیکا</option>
+            <option>خوست</option>
+            <option>لوگر</option>
+            <option>وردک</option>
+            <option>پروان</option>
+            <option>کاپیسا</option>
+            <option>پنجشیر</option>
+            <option>بامیان</option>
+            <option>دایکندی</option>
+            <option>غور</option>
+            <option>کنر</option>
+            <option>لغمان</option>
+            <option>نورستان</option>
+
+          </select>
+
+        </label>
+
+
+        <!-- MIN PRICE -->
+
+        <label>
+
+          <span>
+            حداقل قیمت
+          </span>
+
+          <input
+            id="minPrice"
+            type="number"
+            min="0"
+            placeholder="مثلاً 1000">
+
+        </label>
+
+
+        <!-- MAX PRICE -->
+
+        <label>
+
+          <span>
+            حداکثر قیمت
+          </span>
+
+          <input
+            id="maxPrice"
+            type="number"
+            min="0"
+            placeholder="مثلاً 50000">
+
+        </label>
+
+
+        <!-- SORT -->
+
+        <label>
+
+          <span>
+            مرتب‌سازی
+          </span>
+
+          <select id="sortFilter">
+
+            <option value="newest">
+              جدیدترین
+            </option>
+
+            <option value="oldest">
+              قدیمی‌ترین
+            </option>
+
+            <option value="cheap">
+              ارزان‌ترین
+            </option>
+
+            <option value="expensive">
+              گران‌ترین
+            </option>
+
+          </select>
+
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div class="results-header">
+
+      <strong>
+        آگهی‌ها
+      </strong>
+
+      <span id="resultsCount">
+        0 آگهی
+      </span>
+
+    </div>
+
+    <div
+      id="searchProducts"
+      class="product-grid">
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FAVORITES ================= -->
+
+<section id="favoritesPage" class="page">
+
+  <div class="page-container">
+
+    <div class="page-title">
+
+      <span class="section-label">
+        ⭐ علاقه‌مندی
+      </span>
+
+      <h1>
+        آگهی‌های موردعلاقه
+      </h1>
+
+      <p>
+        آگهی‌هایی که ذخیره کرده‌ای اینجا نمایش داده می‌شوند.
+      </p>
+
+    </div>
+
+    <div
+      id="favoriteProducts"
+      class="product-grid">
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ADD PRODUCT ================= -->
+
+<section id="addPage" class="page">
+
+  <div class="page-container narrow">
+
+    <div class="page-title">
+
+      <span class="section-label">
+        ➕ ثبت آگهی
+      </span>
+
+      <h1>
+        آگهی جدید ثبت کن
+      </h1>
+
+      <p>
+        کالای خود را به خریداران سراسر افغانستان معرفی کن.
+      </p>
+
+    </div>
+
+
+    <div class="form-card">
+
+      <form id="productForm">
+
+        <!-- TITLE -->
+
+        <label>
+
+          <span>
+            عنوان آگهی *
+          </span>
+
+          <input
+            id="productTitle"
+            type="text"
+            maxlength="120"
+            required
+            placeholder="مثلاً Poco X3 NFC">
+
+        </label>
+
+
+        <!-- PRICE -->
+
+        <label>
+
+          <span>
+            قیمت به افغانی *
+          </span>
+
+          <div class="price-input">
+
+            <input
+              id="productPrice"
+              type="number"
+              min="0"
+              required
+              placeholder="مثلاً 5000">
+
+            <b>
+              ؋
+            </b>
+
+          </div>
+
+        </label>
+
+
+        <!-- CATEGORY -->
+
+        <label>
+
+          <span>
+            دسته‌بندی *
+          </span>
+
+          <select
+            id="productCategory"
+            required>
+
+            <option value="">
+              انتخاب دسته
+            </option>
+
+            <option>موبایل</option>
+            <option>لپ‌تاپ</option>
+            <option>وسایل نقلیه</option>
+            <option>املاک</option>
+            <option>لوازم خانه</option>
+            <option>پوشاک</option>
+            <option>الکترونیکی</option>
+            <option>کتاب</option>
+            <option>خدمات</option>
+            <option>کاریابی</option>
+            <option>سایر</option>
+
+          </select>
+
+        </label>
+
+
+        <!-- CITY -->
+
+        <label>
+
+          <span>
+            ولایت *
+          </span>
+
+          <select
+            id="productCity"
+            required>
+
+            <option value="">
+              انتخاب ولایت
+            </option>
+
+            <option>کابل</option>
+            <option>هرات</option>
+            <option>قندهار</option>
+            <option>بلخ</option>
+            <option>ننگرهار</option>
+            <option>کندز</option>
+            <option>تخار</option>
+            <option>بدخشان</option>
+            <option>بغلان</option>
+            <option>فاریاب</option>
+            <option>جوزجان</option>
+            <option>بادغیس</option>
+            <option>فراه</option>
+            <option>نیمروز</option>
+            <option>هلمند</option>
+            <option>زابل</option>
+            <option>غزنی</option>
+            <option>پکتیا</option>
+            <option>خوست</option>
+            <option>لوگر</option>
+            <option>پروان</option>
+            <option>کاپیسا</option>
+            <option>بامیان</option>
+            <option>دایکندی</option>
+            <option>غور</option>
+            <option>کنر</option>
+            <option>لغمان</option>
+            <option>نورستان</option>
+
+          </select>
+
+        </label>
+
+
+        <!-- DESCRIPTION -->
+
+        <label>
+
+          <span>
+            توضیحات
+          </span>
+
+          <textarea
+            id="productDescription"
+            maxlength="2000"
+            rows="6"
+            placeholder="وضعیت کالا، مشخصات، توضیحات و...">
+          </textarea>
+
+        </label>
+
+
+        <!-- IMAGE -->
+
+        <label>
+
+          <span>
+            🖼️ لینک عکس
+          </span>
+
+          <input
+            id="productImage"
+            type="url"
+            placeholder="https://example.com/photo.jpg">
+
+          <small>
+            فعلاً می‌توانی لینک مستقیم عکس را وارد کنی.
+          </small>
+
+        </label>
+
+
+        <button
+          class="primary big-btn"
+          type="submit">
+
+          🚀 ثبت آگهی
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CHAT ================= -->
+
+<section id="chatPage" class="page">
+
+  <div class="page-container">
+
+    <div class="page-title">
+
+      <span class="section-label">
+        💬 پیام‌ها
+      </span>
+
+      <h1>
+        گفتگوهای من
+      </h1>
+
+    </div>
+
+
+    <div class="chat-layout">
+
+      <aside class="chat-list">
+
+        <div class="chat-list-title">
+          گفتگوها
+        </div>
+
+        <div id="conversationList">
+
+          <p class="muted">
+            هنوز گفتگویی نداری.
+          </p>
+
+        </div>
+
+      </aside>
+
+
+      <div class="chat-box">
+
+        <div
+          id="chatHeader"
+          class="chat-header">
+
+          یک گفتگو را انتخاب کن
+
+        </div>
+
+
+        <div
+          id="messages"
+          class="messages">
+        </div>
+
+
+        <form
+          id="messageForm"
+          class="message-form">
+
+          <input
+            id="messageInput"
+            maxlength="1000"
+            placeholder="پیام خود را بنویس..."
+            autocomplete="off">
+
+          <button
+            class="primary"
+            type="submit">
+
+            ارسال
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ACCOUNT ================= -->
+
+<section id="accountPage" class="page">
+
+  <div class="page-container">
+
+    <div class="page-title">
+
+      <span class="section-label">
+        👤 حساب کاربری
+      </span>
+
+      <h1>
+        حساب من
+      </h1>
+
+    </div>
+
+
+    <div class="account-grid">
+
+
+      <!-- PROFILE -->
+
+      <div class="form-card">
+
+        <h2>
+          👤 پروفایل
+        </h2>
+
+        <div id="accountStatus">
+
+          <p class="muted">
+            وارد حساب نشده‌ای.
+          </p>
+
+        </div>
+
+
+        <form
+          id="profileForm"
+          hidden>
+
+          <label>
+
+            <span>
+              نام نمایشی
+            </span>
+
+            <input
+              id="displayName"
+              maxlength="60"
+              placeholder="نام شما">
+
+          </label>
+
+
+          <label>
+
+            <span>
+              ولایت
+            </span>
+
+            <select id="profileCity">
+
+              <option value="">
+                انتخاب ولایت
+              </option>
+
+              <option>کابل</option>
+              <option>هرات</option>
+              <option>قندهار</option>
+              <option>بلخ</option>
+              <option>ننگرهار</option>
+              <option>فراه</option>
+              <option>نیمروز</option>
+              <option>هلمند</option>
+
+            </select>
+
+          </label>
+
+
+          <button
+            class="primary"
+            type="submit">
+
+            ذخیره پروفایل
+
+          </button>
+
+        </form>
+
+      </div>
+
+
+      <!-- AUTH -->
+
+      <div class="form-card">
+
+        <h2>
+          🔐 ورود و ثبت‌نام
+        </h2>
+
+
+        <form id="authForm">
+
+          <label>
+
+            <span>
+              ایمیل
+            </span>
+
+            <input
+              id="email"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="example@gmail.com">
+
+          </label>
+
+
+          <label>
+
+            <span>
+              رمز عبور
+            </span>
+
+            <input
+              id="password"
+              type="password"
+              required
+              minlength="6"
+              autocomplete="current-password"
+              placeholder="حداقل ۶ حرف">
+
+          </label>
+
+
+          <div class="form-buttons">
+
+            <button
+              class="primary"
+              type="submit">
+
+              ورود
+
+            </button>
+
+
+            <button
+              id="signupBtn"
+              class="secondary"
+              type="button">
+
+              ثبت‌نام
+
+            </button>
+
+          </div>
+
+        </form>
+
+
+        <button
+          id="resetBtn"
+          class="text-btn"
+          type="button">
+
+          فراموشی رمز عبور
+
+        </button>
+
+
+        <button
+          id="logoutBtn"
+          class="danger"
+          type="button"
+          hidden>
+
+          خروج از حساب
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SETTINGS ================= -->
+
+<section id="settingsPage" class="page">
+
+  <div class="page-container narrow">
+
+    <div class="page-title">
+
+      <span class="section-label">
+        ⚙️ تنظیمات
+      </span>
+
+      <h1>
+        تنظیمات بازارچه
+      </h1>
+
+    </div>
+
+
+    <div class="settings-card">
+
+
+      <div class="setting-row">
+
+        <div>
+
+          <strong>
+            🌙 حالت تیره
+          </strong>
+
+          <p>
+            ظاهر تاریک برای استفاده راحت‌تر در شب.
+          </p>
+
+        </div>
+
+        <input
+          id="darkToggle"
+          type="checkbox">
+
+      </div>
+
+
+      <div class="setting-row">
+
+        <div>
+
+          <strong>
+            📍 موقعیت
+          </strong>
+
+          <p id="settingsLocation">
+            همه افغانستان
+          </p>
+
+        </div>
+
+        <button
+          id="settingsLocationBtn"
+          class="secondary"
+          type="button">
+
+          تغییر
+
+        </button>
+
+      </div>
+
+
+      <div class="setting-row">
+
+        <div>
+
+          <strong>
+            🔔 اعلان‌ها
+          </strong>
+
+          <p>
+            اعلان‌های مربوط به پیام‌ها و آگهی‌ها.
+          </p>
+
+        </div>
+
+        <input
+          id="notificationToggle"
+          type="checkbox"
+          checked>
+
+      </div>
+
+
+      <div class="privacy-box">
+
+        <strong>
+          🔒 حریم خصوصی
+        </strong>
+
+        <p>
+          اطلاعات حساس مانند رمز عبور، اطلاعات بانکی و
+          اطلاعات شخصی غیرضروری را در آگهی عمومی نکن.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= LOCATION MODAL ================= -->
+
+<div
+  id="locationModal"
+  class="modal">
+
+  <div class="modal-box">
+
+    <div class="modal-header">
+
+      <h2>
+        📍 انتخاب موقعیت
+      </h2>
+
+      <button
+        id="closeLocationModal"
+        class="icon-btn"
+        type="button">
+
+        ✕
+
+      </button>
+
+    </div>
+
+
+    <input
+      id="locationSearch"
+      class="modal-search"
+      type="search"
+      placeholder="جستجوی ولایت...">
+
+
+    <div
+      id="locationList"
+      class="location-list">
+
+      <button data-location="">
+        🇦🇫 همه افغانستان
+      </button>
+
+      <button data-location="کابل">
+        🏙️ کابل
+      </button>
+
+      <button data-location="هرات">
+        🌆 هرات
+      </button>
+
+      <button data-location="قندهار">
+        🏜️ قندهار
+      </button>
+
+      <button data-location="بلخ">
+        🏔️ بلخ
+      </button>
+
+      <button data-location="ننگرهار">
+        🌿 ننگرهار
+      </button>
+
+      <button data-location="فراه">
+        🌾 فراه
+      </button>
+
+      <button data-location="نیمروز">
+        🏜️ نیمروز
+      </button>
+
+      <button data-location="هلمند">
+        🌴 هلمند
+      </button>
+
+      <button data-location="غزنی">
+        🏔️ غزنی
+      </button>
+
+      <button data-location="بامیان">
+        🏔️ بامیان
+      </button>
+
+      <button data-location="بدخشان">
+        🏔️ بدخشان
+      </button>
+
+      <button data-location="کندز">
+        🌄 کندز
+      </button>
+
+      <button data-location="تخار">
+        🌄 تخار
+      </button>
+
+      <button data-location="فاریاب">
+        🌾 فاریاب
+      </button>
+
+      <button data-location="بادغیس">
+        🌿 بادغیس
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div
+  id="toast"
+  class="toast"
+  role="status">
+</div>
+
+
+<!-- ================= BOTTOM NAV ================= -->
+
+<nav class="bottom-nav">
+
+  <button
+    class="bottom-nav-item active"
+    data-page="home"
+    type="button">
+
+    <span>🏠</span>
+    <small>خانه</small>
+
+  </button>
+
+
+  <button
+    class="bottom-nav-item"
+    data-page="search"
+    type="button">
+
+    <span>🔎</span>
+    <small>جستجو</small>
+
+  </button>
+
+
+  <button
+    class="bottom-add"
+    data-page="add"
+    type="button">
+
+    <span>＋</span>
+    <small>ثبت آگهی</small>
+
+  </button>
+
+
+  <button
+    class="bottom-nav-item"
+    data-page="chat"
+    type="button">
+
+    <span>💬</span>
+    <small>پیام</small>
+
+  </button>
+
+
+  <button
+    class="bottom-nav-item"
+    data-page="account"
+    type="button">
+
+    <span>👤</span>
+    <small>حساب</small>
+
+  </button>
+
+</nav>
+
+
+<!-- ================= SUPABASE ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
